@@ -1,0 +1,33 @@
+<html>
+
+<link rel="stylesheet" href="datatables/DataTables-1.10.20/css/jquery.dataTables.min.css">
+<script src="datatables/jQuery-3.3.1/jquery-3.3.1.js"></script>
+<script src="datatables/DataTables-1.10.20/js/jquery.dataTables.min.js"></script>
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Artist ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (i=0; i < artists.length; i++){%>
+         <tr>
+             <td><%=artists[i].id%></td>
+             <td><%=artists[i].name%></td>
+         </tr>   
+        <%}%> 
+    <tfoot>
+        <tr>
+            <th>Artist ID</th>
+            <th>Name</th>
+        </tr>
+    </tfoot>
+</table>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
+
+</html>
